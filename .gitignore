@@ -55,6 +55,9 @@ Thumbs.db
 # Legacy files (old Drawflow implementation)
 legacy/
 
+# Legacy documentation from original Drawflow
+docs/
+
 # AI agent context files (internal development documents)
 PRD.md
 
