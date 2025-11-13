@@ -1,0 +1,41 @@
+.drawflow-lock-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--drawflow-text-secondary, #6b7280);
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.drawflow-lock-button:hover {
+  background: var(--drawflow-bg-hover, #f3f4f6);
+  color: var(--drawflow-text-primary, #1f2937);
+}
+
+.drawflow-lock-button.locked {
+  color: #ef4444;
+}
+
+.drawflow-lock-button.locked:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.drawflow-lock-button.unlocked {
+  color: #10b981;
+}
+
+.drawflow-lock-button.unlocked:hover {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.drawflow-lock-button:active {
+  transform: scale(0.95);
+}
+

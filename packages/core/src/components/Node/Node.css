@@ -1,0 +1,148 @@
+.drawflow-node {
+  position: absolute;
+  min-width: 150px;
+  min-height: 80px;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+  overflow: visible;
+}
+
+.drawflow-node:hover {
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
+}
+
+/* Ensure actions are visible on node hover */
+.drawflow-node:hover .drawflow-node-actions {
+  opacity: 1 !important;
+}
+
+.drawflow-node.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.drawflow-node-content {
+  padding: 12px;
+  min-height: 40px;
+}
+
+.drawflow-node-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.drawflow-node-data {
+  font-size: 12px;
+  color: #6b7280;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.drawflow-node-inputs,
+.drawflow-node-outputs {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.drawflow-node-inputs {
+  left: -12px;
+}
+
+.drawflow-node-outputs {
+  right: -12px;
+}
+
+/* Vertical mode: inputs at top, outputs at bottom */
+.drawflow-node-inputs-vertical {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: row;
+}
+
+.drawflow-node-outputs-vertical {
+  bottom: -12px;
+  right: auto;
+  left: 50%;
+  top: auto;
+  transform: translateX(-50%);
+  flex-direction: row;
+}
+
+.drawflow-port {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: crosshair;
+}
+
+.drawflow-port-input {
+  flex-direction: row;
+}
+
+.drawflow-port-output {
+  flex-direction: row-reverse;
+}
+
+/* Vertical mode port styles */
+.drawflow-node-inputs-vertical .drawflow-port-input {
+  flex-direction: column;
+}
+
+.drawflow-node-outputs-vertical .drawflow-port-output {
+  flex-direction: column-reverse;
+}
+
+.drawflow-port-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #9ca3af;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.drawflow-port:hover .drawflow-port-dot,
+.drawflow-port-hover .drawflow-port-dot {
+  background: #3b82f6;
+  box-shadow: 0 0 0 2px #93c5fd;
+  transform: scale(1.2);
+}
+
+.drawflow-port-label {
+  font-size: 11px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.drawflow-port-input .drawflow-port-label {
+  margin-left: 4px;
+}
+
+.drawflow-port-output .drawflow-port-label {
+  margin-right: 4px;
+}
+
+/* Vertical mode port label positioning */
+.drawflow-node-inputs-vertical .drawflow-port-input .drawflow-port-label {
+  margin-left: 0;
+  margin-top: 4px;
+}
+
+.drawflow-node-outputs-vertical .drawflow-port-output .drawflow-port-label {
+  margin-right: 0;
+  margin-bottom: 4px;
+}
+

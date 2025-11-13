@@ -1,0 +1,36 @@
+.drawflow-theme-toggle {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: var(--drawflow-bg-secondary, #ffffff);
+  color: var(--drawflow-text-primary, #1f2937);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.drawflow-theme-toggle:hover {
+  background: var(--drawflow-bg-hover, #f3f4f6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.drawflow-theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Dark mode styles */
+.dark .drawflow-theme-toggle {
+  background: var(--drawflow-bg-secondary-dark, #374151);
+  color: var(--drawflow-text-primary-dark, #f9fafb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dark .drawflow-theme-toggle:hover {
+  background: var(--drawflow-bg-hover-dark, #4b5563);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+

@@ -1,0 +1,39 @@
+.drawflow-canvas-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure it's above the background but below overlays */
+}
+
+.drawflow-module-tabs-container {
+  position: absolute;
+  top: 0;
+  left: 320px; /* Safe distance from Controls panel (left-4 = 16px + ~280px width + margin) */
+  right: 60px; /* Leave space for lock button */
+  z-index: 1000; /* Higher than Controls panel (z-10) */
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  /* Ensure visibility */
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.drawflow-lock-button-container {
+  position: absolute;
+  top: 4px;
+  right: 16px;
+  z-index: 1001 !important; /* Force even higher visibility */
+  background: white !important;
+  border-radius: 6px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  pointer-events: auto !important;
+}

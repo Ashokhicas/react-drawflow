@@ -1,0 +1,30 @@
+{
+  "name": "@react-drawflow/themes",
+  "version": "0.1.0",
+  "description": "Theme presets for React Drawflow",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "react",
+    "drawflow",
+    "themes",
+    "ui"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@react-drawflow/types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
+

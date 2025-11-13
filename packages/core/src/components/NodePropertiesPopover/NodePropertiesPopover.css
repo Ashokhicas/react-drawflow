@@ -1,0 +1,109 @@
+.drawflow-node-properties-popover {
+  background: var(--drawflow-bg-primary, white);
+  border: 1px solid var(--drawflow-border, #e5e7eb);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  max-width: 400px;
+  max-height: 500px;
+  overflow: hidden;
+  animation: slideDown 0.2s ease-out;
+}
+
+.dark .drawflow-node-properties-popover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.drawflow-node-properties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--drawflow-border, #e5e7eb);
+  background: var(--drawflow-bg-secondary, #f9fafb);
+}
+
+.drawflow-node-properties-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--drawflow-text-primary, #1f2937);
+}
+
+.drawflow-node-properties-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--drawflow-text-secondary, #6b7280);
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.drawflow-node-properties-close:hover {
+  background: var(--drawflow-bg-hover, #e5e7eb);
+  color: var(--drawflow-text-primary, #1f2937);
+}
+
+.drawflow-node-properties-content {
+  padding: 12px 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.drawflow-node-property {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.drawflow-node-property:last-child {
+  margin-bottom: 0;
+}
+
+.drawflow-node-property-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--drawflow-text-secondary, #6b7280);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.drawflow-node-property-value {
+  font-size: 13px;
+  color: var(--drawflow-text-primary, #1f2937);
+  word-break: break-word;
+}
+
+.drawflow-node-property-data {
+  font-size: 11px;
+  color: var(--drawflow-text-primary, #374151);
+  background: var(--drawflow-bg-secondary, #f9fafb);
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--drawflow-border, #e5e7eb);
+  margin: 0;
+  max-height: 200px;
+  overflow: auto;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+

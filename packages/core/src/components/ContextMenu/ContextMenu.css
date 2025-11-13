@@ -1,0 +1,70 @@
+.drawflow-context-menu {
+  background: var(--drawflow-bg-primary, white);
+  border: 1px solid var(--drawflow-border, #e5e7eb);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  padding: 4px;
+  animation: contextMenuSlideIn 0.15s ease-out;
+}
+
+.dark .drawflow-context-menu {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes contextMenuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.drawflow-context-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: var(--drawflow-text-primary, #1f2937);
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.drawflow-context-menu-item:hover:not(.disabled) {
+  background: var(--drawflow-bg-hover, #f3f4f6);
+  color: var(--drawflow-text-primary, #1f2937);
+}
+
+.drawflow-context-menu-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.drawflow-context-menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.drawflow-context-menu-label {
+  flex: 1;
+}
+
+.drawflow-context-menu-divider {
+  height: 1px;
+  background: var(--drawflow-border, #e5e7eb);
+  margin: 4px 0;
+}
+

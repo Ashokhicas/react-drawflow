@@ -1,0 +1,53 @@
+.drawflow-flow-controls {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.drawflow-control-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.drawflow-control-btn:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.drawflow-control-export:hover {
+  color: #3b82f6;
+  background: #eff6ff;
+}
+
+.drawflow-control-import:hover {
+  color: #10b981;
+  background: #ecfdf5;
+}
+
+.drawflow-control-clear:hover {
+  color: #ef4444;
+  background: #fef2f2;
+}
+
+.drawflow-control-btn:active {
+  transform: scale(0.95);
+}
+
+.drawflow-control-btn svg {
+  flex-shrink: 0;
+}
+

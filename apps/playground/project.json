@@ -1,0 +1,62 @@
+{
+  "name": "playground",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/playground/src",
+  "projectType": "application",
+  "tags": ["scope:playground", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/playground"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "dist/apps/playground"
+        },
+        "production": {
+          "outputPath": "dist/apps/playground"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "playground:build:development",
+        "port": 3000,
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "playground:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "playground:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "playground:build:production"
+      }
+    },
+    "type-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit",
+        "cwd": "apps/playground"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
+

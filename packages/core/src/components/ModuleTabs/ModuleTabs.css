@@ -1,0 +1,66 @@
+.drawflow-module-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--drawflow-bg-primary, white);
+  border-bottom: 1px solid var(--drawflow-border, #e5e7eb);
+  padding: 0 8px;
+  min-height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.drawflow-module-tabs-list {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+}
+
+.drawflow-module-tab {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: var(--drawflow-text-secondary, #6b7280);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.drawflow-module-tab:hover {
+  color: var(--drawflow-text-primary, #1f2937);
+  background: var(--drawflow-bg-hover, #f9fafb);
+}
+
+.drawflow-module-tab.active {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+  background: transparent;
+}
+
+.drawflow-module-tab-add {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--drawflow-text-secondary, #6b7280);
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.drawflow-module-tab-add:hover {
+  background: var(--drawflow-bg-hover, #f3f4f6);
+  color: var(--drawflow-text-primary, #1f2937);
+}
+
+.drawflow-module-tab-add:active {
+  transform: scale(0.95);
+}
+

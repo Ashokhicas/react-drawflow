@@ -1,0 +1,54 @@
+{
+  "name": "react-drawflow-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Modern React implementation of Drawflow - Flow-based programming library",
+  "license": "MIT",
+  "author": "Ashokhicas",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ashokhicas/react-drawflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ashokhicas/react-drawflow/issues"
+  },
+  "homepage": "https://github.com/Ashokhicas/react-drawflow#readme",
+  "scripts": {
+    "build": "nx run-many --target=build --all",
+    "dev": "nx run playground:dev",
+    "serve": "nx run playground:serve",
+    "dev:direct": "cd apps/playground && vite",
+    "test": "nx run-many --target=test --all",
+    "lint": "nx run-many --target=lint --all",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "type-check": "nx run-many --target=type-check --all"
+  },
+  "devDependencies": {
+    "@nx/eslint": "^20.0.0",
+    "@nx/js": "^20.0.0",
+    "@nx/react": "^20.0.0",
+    "@nx/vite": "^20.0.0",
+    "@nx/workspace": "^20.0.0",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "nx": "^20.0.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.0",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}

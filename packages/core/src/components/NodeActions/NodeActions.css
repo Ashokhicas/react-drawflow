@@ -1,0 +1,97 @@
+.drawflow-node-actions {
+  position: absolute;
+  top: -32px; /* Position above the node */
+  right: 0;
+  z-index: 1000; /* Higher z-index to be on top */
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.drawflow-node-actions.show-on-hover {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.drawflow-node-actions.always-visible {
+  opacity: 1;
+}
+
+/* Show actions when parent node is hovered - use !important to override any inline styles */
+.drawflow-node:hover .drawflow-node-actions.show-on-hover {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+/* Also show when actions container itself is hovered (for smooth transition) */
+.drawflow-node-actions.show-on-hover:hover {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+/* Keep buttons interactive even when parent has pointer-events: none */
+.drawflow-node-actions.show-on-hover .drawflow-node-actions-buttons {
+  pointer-events: all;
+}
+
+.drawflow-node-actions-buttons {
+  display: flex;
+  gap: 4px;
+  background: var(--drawflow-bg-primary, rgba(255, 255, 255, 0.95));
+  backdrop-filter: blur(4px);
+  border-radius: 6px;
+  padding: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--drawflow-border, rgba(0, 0, 0, 0.05));
+}
+
+.dark .drawflow-node-actions-buttons {
+  background: var(--drawflow-bg-primary, rgba(31, 41, 55, 0.95));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--drawflow-border, rgba(255, 255, 255, 0.1));
+}
+
+.drawflow-node-action-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--drawflow-text-secondary, #6b7280);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.drawflow-node-action-btn:hover {
+  background: var(--drawflow-bg-hover, #f3f4f6);
+  color: var(--drawflow-text-primary, #1f2937);
+}
+
+.drawflow-node-action-clone:hover {
+  color: #10b981;
+  background: #ecfdf5;
+}
+
+.drawflow-node-action-copy:hover {
+  color: #3b82f6;
+  background: #eff6ff;
+}
+
+.drawflow-node-action-menu:hover {
+  color: #6b7280;
+  background: #f3f4f6;
+}
+
+.drawflow-node-action-delete:hover {
+  color: #ef4444;
+  background: #fef2f2;
+}
+
+.drawflow-node-action-btn:active {
+  transform: scale(0.9);
+}
+
